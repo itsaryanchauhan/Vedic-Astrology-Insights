@@ -1,5 +1,6 @@
 const API_URL = 'https://json.freeastrologyapi.com/planets';
-const API_KEY = 'QaV64fNyU42hzevRgozgq7gWIFHEbM0h6A0uZpJm';
+// Replace with your actual API key
+const API_KEY = 'YOUR_API_KEY_HERE'; // Placeholder for security
 
 export async function fetchAstrologyData(birthDetails) {
   try {

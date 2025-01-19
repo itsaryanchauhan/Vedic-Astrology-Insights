@@ -1,0 +1,7 @@
+/* 
+  This file contains global styles for the application.
+  It is used to import Tailwind CSS and any additional custom styles.
+*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities; 

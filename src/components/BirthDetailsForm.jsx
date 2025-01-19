@@ -2,7 +2,13 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Calendar, Clock, MapPin } from 'lucide-react';
 
+/**
+ * BirthDetailsForm component for collecting user's birth details.
+ * @param {function} onSubmit - Function to call on form submission.
+ * @param {boolean} disabled - Flag to disable the form.
+ */
 export default function BirthDetailsForm({ onSubmit, disabled }) {
+  // State to hold birth details
   const [details, setDetails] = React.useState({
     year: 2022,
     month: 8,
@@ -25,7 +31,9 @@ export default function BirthDetailsForm({ onSubmit, disabled }) {
       className="bg-gradient-to-br from-purple-900/90 to-pink-800/90 p-6 rounded-xl shadow-lg border border-purple-500/30 backdrop-blur-sm"
       onSubmit={handleSubmit}
     >
+      {/* Form fields for birth date, time, and location */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Birth Date */}
         <div className="space-y-4">
           <div className="flex items-center space-x-2 text-purple-200">
             <Calendar className="w-5 h-5" />
@@ -63,6 +71,7 @@ export default function BirthDetailsForm({ onSubmit, disabled }) {
           </div>
         </div>
 
+        {/* Birth Time */}
         <div className="space-y-4">
           <div className="flex items-center space-x-2 text-purple-200">
             <Clock className="w-5 h-5" />
@@ -102,6 +111,7 @@ export default function BirthDetailsForm({ onSubmit, disabled }) {
           </div>
         </div>
 
+        {/* Location */}
         <div className="space-y-4">
           <div className="flex items-center space-x-2 text-purple-200">
             <MapPin className="w-5 h-5" />
